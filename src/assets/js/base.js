@@ -80,7 +80,7 @@ var loader = document.getElementById('loader');
 setTimeout(() => {
     const loader = document.getElementById('loader');
     if (loader == null)
-        return;
+        return
     loader.setAttribute("style", "pointer-events: none; opacity: 0; transition: 0.2s ease-in-out;");
     setTimeout(() => {
         loader.setAttribute("style", "display: none;")
