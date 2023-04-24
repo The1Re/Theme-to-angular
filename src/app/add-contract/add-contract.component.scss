@@ -6,14 +6,21 @@
 .line_input{
     display: flex;
     flex-flow: row;
-    flex-wrap: nowrap;
-    
+    justify-items: center;
+    align-items: center;
 }
 .line_input .text{
     color: #27173E;
     font-size: 16px;
+    min-width: max-content;
 }
 .line_input .form-group{
     width: 80%;
     margin-left: 20px;
+}
+select option{
+    background-color: white;
+}
+.mb-6{
+    margin-bottom: 3rem;
 }

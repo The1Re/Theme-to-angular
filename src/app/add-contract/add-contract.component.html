@@ -33,19 +33,153 @@
             <div class="card-body">
                 <h5 class="card-title">ข้อที่ 2 ดอกเบี้ย</h5>
                 <div class="form-check mb-1">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                    <label class="form-check-label" for="flexRadioDefault1">
+                    <input class="form-check-input" type="radio" name="interest" id="no">
+                    <label class="form-check-label" for="no">
                         ไม่มี
                     </label>
                 </div>
                 <div class="form-check mb-1">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-                    <label class="form-check-label" for="flexRadioDefault2">
+                    <input class="form-check-input" type="radio" name="interest" id="yes">
+                    <label class="form-check-label" for="yes">
                         มี
                     </label>
                 </div>
                 <div class="line_input">
                     <label class="text">อัตราร้อยละ</label>
+                    <div class="form-group boxed">
+                        <div class="input-wrapper">
+                            <input type="text" class="form-control">
+                            <label class="endtext">ต่อปี</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-check mb-1">
+                    <input class="form-check-input" type="radio" name="type_interest" id="oneschedule">
+                    <label class="form-check-label" for="oneschedule">
+                        ตามกำหนดชำระคืนเงินต้น
+                    </label>
+                </div>
+                <div class="form-check mb-1">
+                    <input class="form-check-input" type="radio" name="type_interest" id="installment">
+                    <label class="form-check-label" for="installment">
+                        เป็นงวดๆ <small>(เช่น ชำระเป็นรายวัน รายเดือน)</small>
+                    </label>
+                </div>
+                <div class="form-grou mb-6">
+                    <div class="input-wrapper">
+                        <select class="btn btn-primary dropdown-menu">
+                            <option value="" disabled selected hidden>Select your option</option>
+                            <option *ngFor="let option of paytype" class="dropdown-item">
+                                {{ option }}
+                            </option>
+                        </select>
+                    </div>
+                </div>
+                <div class="line_input">
+                    <label class="text">เริ่มชำระดอกเบี้ย</label>
+                    <div class="form-group boxed">
+                        <div class="input-wrapper">
+                            <input type="date" id="date" class="form-control">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section mt-2">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">ข้อ 3 กำหนดการชำระหนี้และการชำระหนี้</h5>
+                <div class="form-check mb-1">
+                    <input class="form-check-input" type="radio" name="payment" id="full-pay">
+                    <label class="form-check-label" for="full-pay">
+                        ชำระคืนเต็มจำนวน
+                    </label>
+                </div>
+                <div class="line_input">
+                    <label class="text">กำหนดชำระวันที่</label>
+                    <div class="form-group boxed">
+                        <div class="input-wrapper">
+                            <input type="date" id="date" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-check mb-1">
+                    <input class="form-check-input" type="radio" name="payment" id="in-pay">
+                    <label class="form-check-label" for="in-pay">
+                        ผ่อนชำระ <small>(เช่น ชำระเป็นรายวัน รายเดือน)</small>
+                    </label>
+                </div>
+                <div class="form-grou mb-6">
+                    <div class="input-wrapper">
+                        <select class="btn btn-primary dropdown-menu">
+                            <option value="" disabled selected hidden>Select your option</option>
+                            <option *ngFor="let option of paytype" class="dropdown-item">
+                                {{ option }}
+                            </option>
+                        </select>
+                    </div>
+                </div>
+                <div class="line_input">
+                    <label class="text">จำนวนงวด</label>
+                    <div class="form-group boxed">
+                        <div class="input-wrapper">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="line_input">
+                    <label class="text">กำหนดชำระวันที่</label>
+                    <div class="form-group boxed">
+                        <div class="input-wrapper">
+                            <input type="date" id="date" class="form-control">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section mt-2">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">ข้อที่ 4 การชำระหนี้ก่อนกำหนด</h5>
+                <div class="form-check mb-1">
+                    <input class="form-check-input" type="radio" name="prescribe" id="noeffect">
+                    <label class="form-check-label" for="noeffect">
+                        สามารถทำได้ โดยไม่มีผลกระทบใดๆ
+                    </label>
+                </div>
+                <div class="form-check mb-1">
+                    <input class="form-check-input" type="radio" name="prescribe" id="benefit">
+                    <label class="form-check-label" for="benefit">
+                        สามารถทำได้ โดยผู้กู้จะได้รับสิทธิประโยชน์
+                    </label>
+                </div>
+                <div class="form-check mb-1">
+                    <input class="form-check-input" type="radio" name="prescribe" id="effect">
+                    <label class="form-check-label" for="effect">
+                        สามารถทำได้ โดยผู้กู้ต้องเสียค่าปรับ
+                    </label>
+                </div>
+                <div class="form-check mb-1">
+                    <input class="form-check-input" type="radio" name="mulct" id="mulct_percen">
+                    <label class="form-check-label" for="mulct_percen">
+                        ค่าปรับร้อยละ
+                    </label>
+                    <div class="form-group boxed">
+                        <div class="input-wrapper">
+                            <input type="text" class="form-control">
+                            <label class="endtext">ของเงินต้น</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-check mb-1">
+                    <input class="form-check-input" type="radio" name="mulct" id="mulct-amount">
+                    <label class="form-check-label" for="mulct-amount">
+                        ค่าปรับจำนวน
+                    </label>
                     <div class="form-group boxed">
                         <div class="input-wrapper">
                             <input type="text" class="form-control">
@@ -60,21 +194,16 @@
     <div class="section mt-2">
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <h6 class="card-subtitle mb-1">Card subtitle</h6>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="section mt-2">
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <h6 class="card-subtitle mb-1">Card subtitle</h6>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
+                <div class="line_input">
+                    <label class="text">ลงนามผู้กู้</label>
+                    <div class="form-group boxed">
+                        <div class="input-wrapper">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <label class="text">วันที่ทำสัญญา</label>
+                    <input type="date" id="date" class="form-control">
+                </div>
             </div>
         </div>
     </div>

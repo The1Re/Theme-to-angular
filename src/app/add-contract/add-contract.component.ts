@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./add-contract.component.scss']
 })
 export class AddContractComponent {
-
+  paytype:Array<string> = ['วัน','เดือน','ปี']
 }
