@@ -1,0 +1,41 @@
+<div class="appHeader">
+    <div class="left">
+        <a routerLink="#" class="headerButton">
+            <ion-icon name="chevron-back-outline" role="img" class="md hydrated" aria-label="chevron back outline"></ion-icon>
+            Back
+        </a>
+    </div>
+    <div class="pageTitle">Infomation Page</div>
+</div>
+
+<div id="appCapsule">
+
+    <div class="section mt-5 mb-4" *ngFor="let data of example">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col">
+                        <label><b>ผู้ให้ยืม/ผู้ให้กู้ : </b>{{ data.lender_name }}</label><br>
+                        <label><b>ผู้ยืม/ผู้กู้ : </b>{{ data.borrower_name }}</label><br>
+                        <label><b>วันที่ทำสัญญา : </b>{{ data.contract_date }}</label><br>
+                        <label><b>วงเงินกู้ยืม : </b>{{ data.loanlimit }}</label><br>
+                        <label><b>อัตราดอกเบี้ย : </b>{{ data.interest_rate }}</label><br>
+                        <label><b>ผ่อนชำระ : </b>{{ data.installment_payment }}</label><br>
+                        <label><b>จำนวนเงินที่ต้องผ่อนชำระ : </b>{{ data.amount_payment }}</label><br>
+                    </div>
+                    <div class="col">
+                        <label><b>วันที่เริ่มผ่อนชำระ : </b>{{ data.start_payment_date }}</label><br>
+                        <label><b>วันผ่อนชำระที่กำลังจะมาถึง : </b>{{ data.incoming_payment_date }}</label><br>
+                        <label><b>วันครบกำหนดผ่อนชำระ : </b>{{ data.last_payment_date }}</label><br>
+                        <label><b>จำนวนเงินที่ผ่อนชำระแล้ว : </b>{{ data.Amount_paid_installments }}</label><br>
+                        <div class="mt-3 btn-box">
+                            <button type="button" class="btn btn-primary btn-lg btn-style">หลักฐานการชำระเงิน</button>
+                            <button type="button" class="btn btn-primary btn-lg btn-style">สัญญากู้ยืมเงิน</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

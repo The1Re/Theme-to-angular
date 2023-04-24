@@ -1,0 +1,18 @@
+.col label{
+    color: #27173E;
+}
+label b{
+    font-weight: 800;
+}
+.btn-box{
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    gap: 30px;
+}
+
+.btn-style{
+    width: 40%; 
+    height: 40px; 
+    font-size: small;
+}
